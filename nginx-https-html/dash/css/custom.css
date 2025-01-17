@@ -1,0 +1,18 @@
+.header1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.header2 {
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.header_time {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+}
+
+.header_rp {
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+}

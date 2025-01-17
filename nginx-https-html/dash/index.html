@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/custom.css">
+  <title>Dashboard Baraya</title>
+</head>
+
+<body class="flex bg-gray-100 min-h-screen">
+
+  <aside class="w-50 bg-white border-r border-gray-200 p-6">
+    <img src="./images/logo.png" alt="Logo" class="mb-4 w-20 h-21">
+    <!-- <h2 class="text-xl font-semibold mb-4">Sidebar</h2> -->
+    <ul class="space-y-2">
+      <li><a href="#" class="text-blue-500 hover:underline">Home</a></li>
+      <li><a href="#" class="text-blue-500 hover:underline">About</a></li>
+      <li><a href="#" class="text-blue-500 hover:underline">Services</a></li>
+      <li><a href="#" class="text-blue-500 hover:underline">Contact</a></li>
+    </ul>
+  </aside>
+  <!-- Container -->
+  <!-- <div class="max-w-7xl mx-auto px-6 lg:px-8"> -->
+  <div class="mx-auto">
+    <!-- <div class="flex border flex-row-reverse"> -->
+    <div class="flex flex-row-reverse">
+      <p id="JamUpdate" class="header_time">
+        17:50
+      </p>
+    </div>
+    <!-- <div class="border"> -->
+    <!-- <div class="border"> -->
+    <div>
+      <p id="TanggalSekarang" class="header2">Total Pendapatan Dari 4 Lokasi Pada, Rabu, 08 Jan 2025</p>
+    </div>
+    <!-- <div class="flex border flex-row-reverse mb-4"> -->
+    <div class="flex flex-row-reverse mb-4">
+      <p id="RateTotal" class="header_rp">
+        Rp 150,000,000.00
+      </p>
+    </div>
+    <!-- Main Content and Sidebar -->
+    <!-- <div class="p-6 grid grid-cols-1 md:grid-cols-[1fr,300px] gap-8"> -->
+    <!-- <div class="flex  grid mx-auto border mt-2 grid-cols-2 md:grid-cols-[1fr,600px] gap-8"> -->
+    <div class="flex"></div>
+    <!-- Main Content -->
+    <main class="p-6 bg-white rounded-lg shadow-lg gap-8">
+      <div class="flex">
+        <div>
+          <div class="p-1 border mb-3">
+            <h2 class="p-2 text-sm font-semibold mb-1">List Lokasi</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300 text-left text-sm">
+              <thead class="bg-gray-200">
+                <tr>
+                  <th class="text-sm font-semibold border border-gray-300 px-4 py-2">Lokasi</th>
+                  <th class="text-sm font-semibold border border-gray-300 px-4 py-2">Tahun</th>
+                  <th class="text-sm font-semibold border border-gray-300 px-4 py-2">Pendapatan</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+              </tbody>
+            </table>
+          </div>
+          <div class="border">
+            <h2 class="p-2 text-sm font-semibold mb-4">Pendapatan Bulanan</h2>
+            <canvas id="mycanvasYear"></canvas>
+          </div>
+          <div class="border mt-3">
+            <h2 class="p-2 text-sm font-semibold mb-4">Pendapatan Harian</h2>
+            <canvas id="mycanvasBar" width="550" height="200"></canvas>
+          </div>
+
+
+          <!-- <div class="p-1 mt-2">
+            <h2 class="p-2 text-sm font-semibold mb-4">List Lokasi</h2>
+            <table class="table-auto w-full border-collapse border border-gray-300 text-left text-sm">
+              <thead class="bg-gray-200">
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2">Lokasi</th>
+                  <th class="border border-gray-300 px-4 py-2">Tahun</th>
+                  <th class="border border-gray-300 px-4 py-2">Pendapatan</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+              </tbody>
+            </table>
+          </div> -->
+
+
+
+        </div>
+        <div class="flex ml-3">
+          <div class="border bg-white border-l p-3 border-gray-200 shadow-lg">
+            <!-- <h2 class="text-xl font-semibold mb-4">Over Night</h2> -->
+            <div class="border mt-3">
+              <h2 class="p-2 text-sm font-semibold mb-4">Quantity ClassId</h2>
+              <canvas id="qtyChart" width="250"></canvas>
+            </div>
+            <div class="border mt-3">
+              <h2 class="p-2 text-sm font-semibold mb-4">Pendapatan ClassId</h2>
+              <canvas id="radarChart" width="250"></canvas>
+            </div>
+          </div>
+          <div class="border bg-white border-l ml-3 p-3 border-gray-200 shadow-lg">
+            <div class="border mt-3">
+              <h2 class="p-2 text-sm font-semibold mb-4">Over Night</h2>
+              <canvas id="overnight_pie" width="250"></canvas>
+            </div>
+            <!-- <div class="border mt-3">
+              <h2 class="p-2 text-sm font-semibold mb-4">Vehicle Class</h2>
+              <canvas id="pieChart" width="250"></canvas>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script> <!-- Date-fns adapter -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/chart5.js"></script>
+  <script src="./js/chart6.js"></script>
+  <script src="./js/chart7.js"></script>
+  <!-- <script src="./js/chart8.js"></script> -->
+  <script src="./js/get_data.js"></script>
+  <script src="./js/overnight.js"></script>
+</body>
+
+</html>
